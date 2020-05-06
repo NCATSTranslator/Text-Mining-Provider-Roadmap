@@ -2,7 +2,7 @@
 name: Text mining error report
 about: Report an error in text-mined output
 title: ''
-labels: text mining error
+labels: incoming, text mining error
 assignees: ''
 
 ---
