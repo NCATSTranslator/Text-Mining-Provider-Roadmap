@@ -12,6 +12,7 @@ A [project board](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadma
 
 ### Concept cooccurrence KG
 | Version | Description |
+| ------- | ----------- |
 | 1.0.2 | This initial KG is based on concept cooccurrence in sentences in the CORD-19 corpus. |
 | 1.1 | (under construction) This KG will use the updated concept recognition systems over the CORD-19 corpus. |
 
