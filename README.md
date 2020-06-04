@@ -1,11 +1,12 @@
 # NCATS Text Mining Provider Roadmap
-This repository serves as a centralized location for organizing and tracking the development of the NCATS Translator Text Mining Provider. The Text Mining Provider aims to provide an up-to-date, Biolink-compatible, knowledge graph composed of assertions mined from the available full-text biomedical literature.  
+This repository serves as a centralized location for organizing and tracking the development of the NCATS Translator Text Mining Provider. The Text Mining Provider aims to provide an up-to-date, Biolink-compatible, knowledge graph composed of assertions mined from the available full-text biomedical literature. While tools are developed to extract Biolink associations from the literature, a knowledge graph based on the cooccurrence of concepts in sentences will be used as a proxy, indicating a related_to relation between concepts.
 
 A [project board](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/projects/1) is available to monitor progress of the milestones from the initial Text Mining Provider proposal.
 
-
 ## Feature requests and issues
+The Text Mining Provider aims to serve the needs of the NCATS Translator community, and thus development efforts are prioritized based on community input and feedback. If you have a specific target you would like the Text Mining Provider to address, or would like to report a text mining error [please submit an issue to this repository](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/issues/new/choose).
 
+A [project board](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/projects/2) is available to monitor feature requests and issues as they migrate through the different stages of development.
 
 ## Available Knowledge Graphs
 
