@@ -8,7 +8,7 @@ While development continues for the full-scale text-mined KG, a sample text-mine
 
 | Version | Format | Description |
 | ------- | ------ | ----------- |
-| [CRAFT-sample-v0.1](https://raw.githubusercontent.com/NCATSTranslator/Text-Mining-Provider-Roadmap/master/sample-kg/text-mined/kgx/v0.1) | KGX TSV | This sample KG consists of instances of ([biolink:GeneToExpressionSiteAssociations](https://biolink.github.io/biolink-model/docs/GeneToExpressionSiteAssociation.html)) extracted from the manual assertion annotation available as part of the CRAFT corpus |
+| [CRAFT-sample-v0.1](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/tree/add-sample-text-mined-kg-in-kgx-format/sample-kg/text-mined/kgx/v0.1) | KGX TSV | This sample KG consists of instances of ([biolink:GeneToExpressionSiteAssociations](https://biolink.github.io/biolink-model/docs/GeneToExpressionSiteAssociation.html)) extracted from the manual assertion annotation available as part of the CRAFT corpus |
 
 #### KGX format used for the text-mined KG
 There are two types of nodes present in the text-mined KG:
