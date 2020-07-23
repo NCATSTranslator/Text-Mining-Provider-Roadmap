@@ -54,11 +54,11 @@ Below is the representation in KGX format for a `biolink:GeneToExpressionSiteAss
    | PR:000010159 | biolink:expressed_in | UBERON:0004362 | RO:0002206 | 9Hy20FTWHEGsy5nIuUaHuHLhNk4 | biolink:GeneToExpressionSiteAssociation | xK4hbaevM6H9gBugVaY_C85QBtM |
 
 ##### Nodes
-   | id | name | category | sentence | subject_spans | relation_spans | object_spans | publication | 
-   | -- | ---- | -------- | -------- | ------------- | -------------- | ------------ | ----------- |
+   | id | name | category | publication | sentence | subject_spans | relation_spans | object_spans | provided_by | 
+   | -- | ---- | -------- | ----------- | -------- | ------------- | -------------- | ------------ | ----------- |
    | PR:000010159 |  | biolink:GeneProduct | | | | |
    | UBERON:0004362 |  | biolink:AnatomicalEntity | | | | |
-   | xK4hbaevM6H9gBugVaY_C85QBtM | biolink:InformationContentEntity | PMCID:PMC324396 | At E9.5 ERK5 expression was seen in the first and second branchial arch, cephalic region, somites and lateral ridge along the body wall. | start: 8, end: 12 | start: 13, end: 23 | start: 40, end: 45\|start: 57, end: 71 | CRAFT |
+   | xK4hbaevM6H9gBugVaY_C85QBtM | | biolink:InformationContentEntity | PMCID:PMC324396 | At E9.5 ERK5 expression was seen in the first and second branchial arch, cephalic region, somites and lateral ridge along the body wall. | start: 8, end: 12 | start: 13, end: 23 | start: 40, end: 45\|start: 57, end: 71 | CRAFT |
 
 ## Concept cooccurrence KG
 The second knowledge graph provided by the Text Mining KP consists of a cooccurrence network where the nodes are ontology concepts and links between nodes indicate that the two concepts cooccur in the same sentence, and that these concepts cooccur together more often than by chance.
