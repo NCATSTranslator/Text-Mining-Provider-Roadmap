@@ -10,16 +10,7 @@ A [project board](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadma
 
 ## Available Knowledge Graphs
 
-### Concept cooccurrence KG
-| Version | Description |
-| ------- | ----------- |
-| [0.1.0](https://github.com/UCDenver-ccp/Translator-TM-Provider-Overview/raw/master/sample-files/cooccurrence/concept-cooccurrence-cord19-kg.v0.1.0.tsv.gz) | This initial KG is based on concept cooccurrence in sentences in the CORD-19 corpus, filtered using a Chi-squared statistic. The file uses a two-column tsv format where each line represents an edge in the graph linking the concepts using a non-specific relation, e.g. *related_to*. |
-| 0.2.0 | (under construction) This KG will use the updated concept recognition systems over the CORD-19 corpus. |
-
-### Text-mined assertion KG
-| Version | Description |
-| ------- | ----------- |
-| CRAFTv5.0.0 | (under construction) This sample KG will consist of Biolink associations that have been extracted from the manual assertion annotation available as part of the CRAFT corpus. |
+While the tooling to provide KGs at the scale of the biomedical literature is being built, some sample KGs have been made available for use. Please find the available sample KGs enumerated in the [Sample Knowledge Graphs README](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/blob/add-sample-text-mined-kg-in-kgx-format/sample-kg/README.md). 
 
 
 ## Concept Recognition
