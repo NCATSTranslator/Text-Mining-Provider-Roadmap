@@ -4,7 +4,7 @@ The Text Mining KP provides two types of knowledge graphs. The text-mined KG con
 ## Text-mined KG
 The *text-mined KG* contains assertions between pairs of ontology concepts that have been mined from the biomedical literature. Work is underway to extract assertions that have been prioritized by the Translator community (for details please see the relevant GitHub issues for [new concept request](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+concept+type+request%22) and [new association requests](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/issues?q=is%3Aissue+is%3Aopen+label%3A%22new+association+request%22)). Please feel free to submit requests (as GitHub issues) for new concepts and/or associations to be mined from the scientific literature.
 
-While development continues for the full-scale text-mined KG, a sample text-mined KG is provided. This sample KG leverages the manual annotation effort of the [CRAFT corpus](https://github.com/UCDenver-ccp/craft) and consists of instances of Biolink associations extracted from the CRAFT corpus. 
+A sample text-mined KG is provided in this repository that leverages the manual annotation effort of the [CRAFT corpus](https://github.com/UCDenver-ccp/craft) and consists of instances of Biolink associations extracted from the CRAFT corpus. 
 
 | Version | Format | Description |
 | ------- | ------ | ----------- |
@@ -59,10 +59,3 @@ Below is the representation in KGX format for a `biolink:GeneToExpressionSiteAss
    | PR:000010159 |  | biolink:GeneProduct | | | | |
    | UBERON:0004362 |  | biolink:AnatomicalEntity | | | | |
    | xK4hbaevM6H9gBugVaY_C85QBtM | | biolink:InformationContentEntity | PMCID:PMC324396 | At E9.5 ERK5 expression was seen in the first and second branchial arch, cephalic region, somites and lateral ridge along the body wall. | start: 8, end: 12 | start: 13, end: 23 | start: 40, end: 45\|start: 57, end: 71 | CRAFT |
-
-## Concept cooccurrence KG
-The second knowledge graph provided by the Text Mining KP consists of a cooccurrence network where the nodes are ontology concepts and links between nodes indicate that the two concepts cooccur in the same sentence, and that these concepts cooccur together more often than by chance.
-
-**Coming soon: Conversion of the cooccurrence KG to KGX format is underway**
-
-The cooccurrence network is comprised of data from ~40k documents from the CORD19 corpus (this is a COVID19-specific collection of scientific papers) and makes use of ontology concept from 10 of the Open Biomedical Ontologies. The list of ontologies is available [here](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/blob/master/README.md).

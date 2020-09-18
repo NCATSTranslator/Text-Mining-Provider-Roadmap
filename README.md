@@ -10,8 +10,12 @@ A [project board](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadma
 
 ## Available Knowledge Graphs
 
-While the tooling to provide KGs at the scale of the biomedical literature is being built, some sample KGs have been made available for use. Please find the available sample KGs enumerated in the [Sample Knowledge Graphs README](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/blob/add-sample-text-mined-kg-in-kgx-format/sample-kg/README.md). 
-
+* [Ontology concept cooccurrence KG](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/README_cooccur_kgs.md)
+  * a KG linking ontology concepts that cooccur in scientific text, scored using Google normalized distance
+* [Targeted text-mined association KG](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/README_assoc_kgs.md)
+  * a KG of Biolink associations extracted from scientific text
+* [Ontology KGs](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/README_ontology_kgs.md)
+  * KGs containing the subclass and relation hierarchies of biomedical ontologies normalized to Biolink concepts/relations
 
 ## Concept Recognition
 
@@ -21,7 +25,9 @@ Currently, the Text Mining Provider extracts mentions of concepts from ten Bioli
 * [Gene Ontology Biological Process (GO_BP)](http://obofoundry.org/ontology/go.html)
 * [Gene Ontology Cellular Component (GO_CC)](http://obofoundry.org/ontology/go.html)
 * [Gene Ontology Molecular Function (GO_MF)](http://obofoundry.org/ontology/go.html)
+* [Human Phenotype Ontology (HP)](https://hpo.jax.org/app/)
 * [Molecular Process Ontology (MOP)](http://obofoundry.org/ontology/mop.html)
+* [Monarch Disease Ontology (MONDO)](https://mondo.monarchinitiative.org/)
 * [NCBI Taxonomy (NCBITaxon)](http://obofoundry.org/ontology/ncbitaxon.html)
 * [Protein Ontology (PR)](http://obofoundry.org/ontology/pr.html)
 * [Sequence Ontology (SO)](http://obofoundry.org/ontology/so.html)
@@ -29,7 +35,7 @@ Currently, the Text Mining Provider extracts mentions of concepts from ten Bioli
 
 
 ### Evaluation of concept recognition on the CRAFT test corpus 
-The [CRAFT corpus](https://github.com/UCDenver-ccp/craft) contains an evaluation set of 30 full text articles that have been used to evaluate the concept recognition systems used by the Text Mining Provider as they have developed. There is a balance between concept recognition performance and runtime that must be maintained in order to achieve adequate performance, but be able to process documents at scale. Versions of the concept recognition systems used for available KGs and their respective performances are detailed below. 
+The [CRAFT corpus](https://github.com/UCDenver-ccp/craft) contains an evaluation set of 30 full text articles that have been used to evaluate the concept recognition systems used by the Text Mining Provider as they have developed. Versions of the concept recognition systems used for available KGs and their respective performances are detailed below. 
 | Ontology | Version | P | R | F | 
 | -------- | - | - | - | - |
 | CHEBI OGER | 0.1.0 | 0.6997 | 0.6609 | 0.6797 | 
