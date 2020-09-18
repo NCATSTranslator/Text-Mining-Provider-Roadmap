@@ -32,7 +32,7 @@ When using the cooccurrence KGs, it may be important to note that the concept re
 
 | Version | Association type(s) | Format | Location | 
 | ------- | ------------------- | ------ | -------- | 
-| SepRelay | ChemicalToGeneAssociation (CHEBI up/down-regulates PR) | KGX   | [nodes.tsv](https://storage.googleapis.com/translator-tm-provider-knowledge-graphs/text-mined/current/text-mined.nodes.current.kgx.tsv) / [edges.tsv](https://storage.googleapis.com/translator-tm-provider-knowledge-graphs/text-mined/current/text-mined.edges.current.kgx.tsv) |
+| SepRelay | ChemicalToGeneAssociation (CHEBI up/down-regulates PR) | KGX   | [nodes.tsv](https://storage.googleapis.com/translator-tm-provider-knowledge-graphs/text-mined/current/text-mined.nodes.current.kgx.tsv.gz) / [edges.tsv](https://storage.googleapis.com/translator-tm-provider-knowledge-graphs/text-mined/current/text-mined.edges.current.kgx.tsv.gz) |
 
 
 
