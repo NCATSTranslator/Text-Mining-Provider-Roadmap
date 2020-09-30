@@ -30,10 +30,10 @@ When using the cooccurrence KGs, it may be important to note that the concept re
 
 ## Available KGs
 
-| Version | Association type(s) | Format | Location | Example query |
-| ------- | ------------------- | ------ | -------- | ------- |
-| SepRelay | ChemicalToGeneAssociation (CHEBI up/down-regulates PR) | KGX   | [nodes.tsv](https://storage.googleapis.com/translator-tm-provider-knowledge-graphs/text-mined/current/text-mined.nodes.current.kgx.tsv.gz) / [edges.tsv](https://storage.googleapis.com/translator-tm-provider-knowledge-graphs/text-mined/current/text-mined.edges.current.kgx.tsv.gz) ||
-| SepRelay | ChemicalToGeneAssociation (CHEBI up/down-regulates PR) | BioThings API | [API](https://biothings.ncats.io/text_mining_targeted_association) | [Find chemicals that can up-regulate a gene/protein](https://biothings.ncats.io/text_mining_targeted_association/query?q=object.id:NCBIGene\:944%20AND%20association.edge_label:positively_regulates_entity_to_entity%20&size=400) |
+| Version | Association type(s) | Format | Location |
+| ------- | ------------------- | ------ | -------- |
+| SepRelay | ChemicalToGeneAssociation (CHEBI up/down-regulates PR) | KGX   | [nodes.tsv](https://storage.googleapis.com/translator-tm-provider-knowledge-graphs/text-mined/current/text-mined.nodes.current.kgx.tsv.gz) / [edges.tsv](https://storage.googleapis.com/translator-tm-provider-knowledge-graphs/text-mined/current/text-mined.edges.current.kgx.tsv.gz) |
+| SepRelay | ChemicalToGeneAssociation (CHEBI up/down-regulates PR) | BioThings API | [API](https://biothings.ncats.io/text_mining_targeted_association) |
 
 
 
