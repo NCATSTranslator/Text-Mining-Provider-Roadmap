@@ -10,10 +10,10 @@ A [project board](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadma
 
 ## Available Knowledge Graphs
 
-* [Ontology concept cooccurrence KG](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/blob/master/README_cooccur_kgs.md)
-  * a KG linking ontology concepts that cooccur in scientific text, scored using Google normalized distance
 * [Targeted text-mined association KG](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/blob/master/README_assoc_kgs.md)
   * a KG of Biolink associations extracted from scientific text
+* [Ontology concept cooccurrence KG](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/blob/master/README_cooccur_kgs.md)
+  * a KG linking ontology concepts that cooccur in scientific text, scored using Google normalized distance
 * [Ontology KGs](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/blob/master/README_ontology_kgs.md)
   * KGs containing the subclass and relation hierarchies of biomedical ontologies normalized to Biolink concepts/relations
 
