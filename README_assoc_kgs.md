@@ -62,9 +62,41 @@ This KG consists of Biolink associations that have been extracted from sentences
 * The character offsets (relative to the sentence) for the text mentions of the subject and object concept of the assertion
 * A confidence score for this specific text-mined assertion (right now this is the score reported by the classifier that identified the sentence)
 
+#### Sample query
+Find `biolink:GeneOrGeneProduct` entities for which bupivacaine (CHEBI:3215) negatively regulates.
+
+```bash
+curl --location --request POST 'https://api.bte.ncats.io/v1/smartapi/978fe380a147a8641caf72320862697b/query/' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "message": {
+        "query_graph": {
+            "nodes": {
+                "n0": {
+                    "category": "biolink:ChemicalSubstance",
+                    "id": "CHEBI:3215"
+                },
+                "n1": {
+                    "category": "biolink:GeneOrGeneProduct"
+                }
+            },
+            "edges": {
+                "e00": {
+                    "subject": "n0",
+                    "object": "n1",
+                    "predicate": "biolink:negatively_regulates"
+                }
+            }
+        }
+    }
+}'
+```
+
+
+#### Evidence/Provenance/Confidence structure
 Currently, each packet of EPC information (one per sentence that was observed to assert the association) is stored as an edge attribute in the TRAPI knowledge representation model. Because there may be more than one sentence observed to assert a single association, separate arrays are used to store the different EPC values whereby the index in the array inherently connects the EPC values for a single sentence. The example below demonstrates the TRAPI representation of edge attributes for an extracted Biolink association supported by two sentences in the literature.
 
-#### Two example EPC packets describing sentences that assert `bupivacaine --downregulates--> LRRC3B`
+###### Two example EPC packets describing sentences that assert `bupivacaine --downregulates--> LRRC3B`
 ```yaml
 # This assertion is supported by two sentences in the literature
       {
@@ -86,7 +118,7 @@ Currently, each packet of EPC information (one per sentence that was observed to
       }
 ```
 
-#### TRAPI v1.0 representation of the two EPC packets shown above
+###### TRAPI v1.0 representation of the two EPC packets shown above
 ```yaml
 edges:
   - id: 9445e98f72ada21aa572559e303e4d5ac414650f
