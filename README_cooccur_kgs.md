@@ -37,6 +37,35 @@ The current KG comprises cooccurrence data from ~30M PubMed/Medline titles & abs
 
 ## TRAPI v1.0
 
+#### Sample query
+Find cooccurrence relations between MONDO:0003295 and other disease concepts.
+```bash
+curl --location --request POST 'https://api.bte.ncats.io/v1/smartapi/5be0f321a829792e934545998b9c6afe/query/' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "message": {
+        "query_graph": {
+            "nodes": {
+                "n0": {
+                    "category": "biolink:Disease",
+                    "id": "MONDO:0003295"
+                },
+                "n3": {
+                    "category": "biolink:Disease"
+                }
+            },
+            "edges": {
+                "e03": {
+                    "subject": "n0",
+                    "object": "n3"
+                }
+            }
+        }
+    }
+}'
+```
+
+#### Evidence/Provenance/Confidence structure
 Evidence indicating the NGD score is associated with each edge using the TRAPI attribute schema as indicated below:
 
 ```yaml
