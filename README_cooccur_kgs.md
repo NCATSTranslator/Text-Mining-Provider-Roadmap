@@ -27,13 +27,14 @@ When using the cooccurrence KGs, it may be important to note that the concept re
 
 ### PubMed/Medline
 
-The current KG comprises cooccurrence data from ~825,000 PubMed/Medline titles & abstracts using all of the ontologies listed above.
+The current KG comprises cooccurrence data from ~30M PubMed/Medline titles & abstracts (2019 and prior) using all of the ontologies listed above.
 
 | Version | Format | Location | Example query |
 | ------- | ------ | -------- | ------------- |
-| SepRelay | KGX   | [nodes.tsv](https://storage.googleapis.com/translator-tm-provider-knowledge-graphs/concept-cooccurrence/current/ngd-concept-cooccur.current.nodes.kgx.tsv.gz) / [edges.tsv](https://storage.googleapis.com/translator-tm-provider-knowledge-graphs/concept-cooccurrence/current/ngd-concept-cooccur.current.edges.kgx.tsv.gz) | |
-| SepRelay | BioThings API | [API](https://biothings.ncats.io/text_mining_co_occurrence_kp) | [Find phenotypes related to a specific disease](https://biothings.ncats.io/text_mining_co_occurrence_kp/query?q=object.MONDO:%22MONDO:0003150%22%20AND%20subject.type:PhenotypicFeature&size=200) |
-| SepRelay-alpha | ReasonerAPI | [TextMiningKP API](https://automat.renci.org/)  |  |
+| FebRelay | KGX   | [nodes.tsv](https://storage.googleapis.com/translator-tm-provider-knowledge-graphs/concept-cooccurrence/current/ngd-concept-cooccur.current.nodes.kgx.tsv.gz) / [edges.tsv](https://storage.googleapis.com/translator-tm-provider-knowledge-graphs/concept-cooccurrence/current/ngd-concept-cooccur.current.edges.kgx.tsv.gz) | |
+| FebRelay | BioThings API | [API](https://biothings.ncats.io/text_mining_co_occurrence_kp) | [Find phenotypes related to a specific disease](https://biothings.ncats.io/text_mining_co_occurrence_kp/query?q=object.MONDO:%22MONDO:0003150%22%20AND%20subject.type:PhenotypicFeature&size=200) |
+| FebRelay | TRAPI v1.0 | [API](https://smart-api.info/ui/5be0f321a829792e934545998b9c6afe) | |
+
 
 
 ## KGX format
