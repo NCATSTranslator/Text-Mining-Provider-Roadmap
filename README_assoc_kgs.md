@@ -25,7 +25,7 @@ To date, there is a single extracted association type available:
 
 
 ### A note about concept recognition using the Protein Ontology
-When using the cooccurrence KGs, it may be important to note that the concept recognition pipeline for Protein Ontology (PRO) concepts tends to annotate to higher-level, species non-specific PRO concepts. This is a result of how the training data has been annotated. It turns out that it is often very difficult to determine the species for a given protein in text (difficult even for human annotators) so our tools make use of the higher-level, species-non-specific concepts. There may, therefore, be added inference steps required to traverse a knowledge graph from a species-specific entity to the species-non-specific PRO concept used in the annotation. In an effort to aid in this traversal, we have build a [knowledge graph consisting of the PRO subsumption and relation hierarchies](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/README_ontology_kgs.md). 
+When using the cooccurrence KGs, it may be important to note that the concept recognition pipeline for Protein Ontology (PRO) concepts tends to annotate to higher-level, species non-specific PRO concepts. This is a result of how the training data has been annotated. It turns out that it is often very difficult to determine the species for a given protein in text (difficult even for human annotators) so our tools make use of the higher-level, species-non-specific concepts. There may, therefore, be added inference steps required to traverse a knowledge graph from a species-specific entity to the species-non-specific PRO concept used in the annotation. In an effort to aid in this traversal, we have built a [knowledge graph consisting of the PRO subsumption and relation hierarchies](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/README_ontology_kgs.md). 
 
 
 ## Available KGs
@@ -34,6 +34,8 @@ When using the cooccurrence KGs, it may be important to note that the concept re
 | ------- | ------------------- | ------ | -------- |
 | SepRelay | ChemicalToGeneAssociation (CHEBI up/down-regulates PR) | KGX   | [nodes.tsv](https://storage.googleapis.com/translator-tm-provider-knowledge-graphs/text-mined/current/text-mined.nodes.current.kgx.tsv.gz) / [edges.tsv](https://storage.googleapis.com/translator-tm-provider-knowledge-graphs/text-mined/current/text-mined.edges.current.kgx.tsv.gz) |
 | SepRelay | ChemicalToGeneAssociation (CHEBI up/down-regulates PR) | BioThings API | [API](https://biothings.ncats.io/text_mining_targeted_association) |
+| SepRelay | ChemicalToGeneAssociation (CHEBI up/down-regulates PR) | TRAPI v1.0 | [API](https://smart-api.info/ui/978fe380a147a8641caf72320862697b) |
+
 
 
 
