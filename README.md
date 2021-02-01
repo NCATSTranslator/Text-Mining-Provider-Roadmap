@@ -76,13 +76,7 @@ Initial development of tools to extract explicit Biolink associations is underwa
 
 
 ## Associated Code Repositories
-* [Translator TM Provider Infrastructure Modules](https://github.com/UCDenver-ccp/Translator-TM-Provider-Infrastructure-Modules)
-  * Kubernetes cluster configuration files (Terraform)
-  * Kubernetes service configuration files (Helm)
-* [Translator TM Provider Infrastructure Live](https://github.com/UCDenver-ccp/Translator-TM-Provider-Infrastructure-Live)
-  * Facilitates staging and production environments
 * [Translator TM Provider Pipelines](https://github.com/UCDenver-ccp/Translator-TM-Provider-Pipelines)
- * Apache Beam pipelines used to populate 
 * [Translator NLP Evaluation Service](https://github.com/UCDenver-ccp/Translator-nlp-eval-service)
 
 
