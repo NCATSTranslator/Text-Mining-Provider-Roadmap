@@ -1,0 +1,20 @@
+name: Live tests of Text Mining Provider KPs
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # runs at midnight every day
+
+jobs:
+
+  live-tests:
+    runs-on: ubuntu-latest
+    name: Run tests on live text mining provider KPs
+    env:
+      IMAGE_NAME: kg-live-test
+      DOCKERFILE: testing/live/Dockerfile
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build Docker Image
+        run: docker build --tag "$IMAGE_NAME:latest" -f "$DOCKERFILE" testing/live
+      - name: Run the Docker container to run the live tests
+        run: docker run --rm "$IMAGE_NAME:latest"
