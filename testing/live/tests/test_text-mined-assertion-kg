@@ -1,0 +1,28 @@
+
+Q1=$(cat /home/dev/tests/q1.json)
+
+test_should_return_curie_that_is_used_in_query() {
+
+    # query the TRAPI endpoint
+    curl --location --request POST "$TEXT_MINED_TRAPI_URL" \
+         --header 'Content-Type: application/json' \
+         --data-raw "${Q1}" > a1.json
+
+    # extract the node identifiers from the returned knowledge graph
+    jq '.message.knowledge_graph.nodes 
+        | to_entries 
+        | map(select(.key | match("CHEBI:77431";"i"))) 
+        | map(.key)' a1.json > a1.node.keys 
+
+    msg="=================================================================\n
+         Check that the CURIE specified in the query is returned as a node\n
+         in the knowledge graph. For this particular query we noticed that\n
+         CHEBI:3215 is not returned. Instead, CHEBI:77431 is used as BTE\n
+         has merged the two CHEBI concepts.\n
+         ================================================================="
+
+    assert "grep CHEBI:3215 a1.node.keys" "$msg"
+           
+    # clean up
+    rm a1.json a1.node.keys
+}

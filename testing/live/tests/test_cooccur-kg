@@ -1,0 +1,35 @@
+
+Q2=$(cat /home/dev/tests/q2.json)
+
+test_should_return_single_relation_when_both_subj_obj_specified() {
+
+    # query the TRAPI endpoint
+    curl --location --request POST "$COOCCUR_TRAPI_URL" \
+         --header 'Content-Type: application/json' \
+         --data-raw "${Q2}" > a2.json
+
+    # extract the node identifiers from the returned knowledge graph
+    jq '.message.knowledge_graph.edges 
+        | to_entries 
+        | map(.key)' a2.json > a2.edge.keys 
+
+    msg1="=================================================================\n
+          The expected edge is not present in the knowledge graph.\n
+          ================================================================="
+
+    expected_edge="CHEBI:6801-biolink:related_to-HP:0003074"
+    assert "grep $expected_edge a2.edge.keys" "$msg1"
+
+    msg2="=================================================================\n
+         Both the subject and object query node are constrained to specific\n
+         CURIEs, therefore only a single edge should be returned.\n
+         However, it appears that more than one edge is returned for some reason.\n
+         ================================================================="
+
+    # There should be 3 lines: open/closing brackets and the expected edge
+    edge_count=$(wc -l a2.edge.keys)
+    assert_equals "3 a2.edge.keys" "$edge_count" "$msg2"
+           
+    # clean up
+    rm a2.json a2.edge.keys
+}
