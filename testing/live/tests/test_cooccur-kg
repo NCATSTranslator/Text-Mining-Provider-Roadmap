@@ -8,7 +8,7 @@ test_should_return_single_relation_when_both_subj_obj_specified() {
          --header 'Content-Type: application/json' \
          --data-raw "${Q2}" > a2.json
 
-    # extract the node identifiers from the returned knowledge graph
+    # extract the edge keys from the returned knowledge graph
     jq '.message.knowledge_graph.edges 
         | to_entries 
         | map(.key)' a2.json > a2.edge.keys 
