@@ -1,0 +1,49 @@
+# This query looks for proteins regulated by glucose
+Q3=$(cat /home/dev/tests/q3.json)
+# This query looks for proteins regulated by a parent of glucose (monosaccharide)
+Q4=$(cat /home/dev/tests/q3.json)
+
+test_class_subsumption() {
+
+    # query the TRAPI endpoint
+    curl --location --request POST "$TEXT_MINED_TRAPI_URL" \
+         --header 'Content-Type: application/json' \
+         --data-raw "${Q3}" > a3.json
+
+    # extract the edge keys from the returned knowledge graph
+    jq '.message.knowledge_graph.edges 
+        | to_entries 
+        | map(.key)' a3.json > a3.edge.keys 
+
+    msg1="=================================================================\n
+          The expected edge is not present in the knowledge graph.\n
+          This test is failing because CHEBI:17234 is combined with CHEBI:15903\n
+          in BTE. This probably shouldn't be the case.\n
+          ================================================================="
+
+    expected_edge="CHEBI:17234-biolink:entity-negatively-regulates-entity-PR:000005061"
+    assert "grep $expected_edge a3.edge.keys" "$msg1"
+
+
+    # query the TRAPI endpoint
+    curl --location --request POST "$TEXT_MINED_TRAPI_URL" \
+         --header 'Content-Type: application/json' \
+         --data-raw "${Q4}" > a4.json
+
+    # extract the edge keys from the returned knowledge graph
+    jq '.message.knowledge_graph.edges 
+        | to_entries 
+        | map(.key)' a4.json > a4.edge.keys 
+
+    msg2="=================================================================\n
+          The expected edge is not present in the knowledge graph.\n
+          It should be present since it was returned using Q3 and Q4\n
+          uses a parent of glucose as the subject.\n
+          ================================================================="
+
+    expected_edge="CHEBI:17234-biolink:entity-negatively-regulates-entity-PR:000005061"
+    assert "grep $expected_edge a4.edge.keys" "$msg2"
+
+    # clean up
+    rm a3.json a3.edge.keys a4.json a4.edge.keys
+}

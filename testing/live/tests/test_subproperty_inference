@@ -1,0 +1,49 @@
+# This query looks for proteins negatively regulated by glucose
+Q5=$(cat /home/dev/tests/q5.json)
+# This query looks for proteins regulated by glucose
+Q6=$(cat /home/dev/tests/q6.json)
+
+test_class_subsumption() {
+
+    # query the TRAPI endpoint
+    curl --location --request POST "$TEXT_MINED_TRAPI_URL" \
+         --header 'Content-Type: application/json' \
+         --data-raw "${Q5}" > a5.json
+
+    # extract the edge keys from the returned knowledge graph
+    jq '.message.knowledge_graph.edges 
+        | to_entries 
+        | map(.key)' a5.json > a5.edge.keys 
+
+    msg1="=================================================================\n
+          The expected edge is not present in the knowledge graph.\n
+          This test is failing because CHEBI:17234 is combined with CHEBI:15903\n
+          in BTE. This probably shouldn't be the case.\n
+          ================================================================="
+
+    expected_edge="CHEBI:17234-biolink:entity-negatively-regulates-entity-PR:000005061"
+    assert "grep $expected_edge a5.edge.keys" "$msg1"
+
+
+    # query the TRAPI endpoint
+    curl --location --request POST "$TEXT_MINED_TRAPI_URL" \
+         --header 'Content-Type: application/json' \
+         --data-raw "${Q6}" > a6.json
+
+    # extract the edge keys from the returned knowledge graph
+    jq '.message.knowledge_graph.edges 
+        | to_entries 
+        | map(.key)' a6.json > a6.edge.keys 
+
+    msg2="=================================================================\n
+          The expected edge is not present in the knowledge graph.\n
+          It should be present since it was returned using Q5 and Q6\n
+          uses a super property of the predicate used in Q5.\n
+          ================================================================="
+
+    expected_edge="CHEBI:17234-biolink:entity-negatively-regulates-entity-PR:000005061"
+    assert "grep $expected_edge a6.edge.keys" "$msg2"
+
+    # clean up
+    rm a5.json a5.edge.keys a6.json a6.edge.keys
+}
