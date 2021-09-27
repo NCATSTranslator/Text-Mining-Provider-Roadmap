@@ -4,7 +4,8 @@ The Text Mining Provider produces knowledge graphs consisting of explicitly targ
 
 The figure below details the associations that have been extracted from the scientific literature. Relations colored in gray are not yet part of the distributed knowledge graph, but are under active development. Note that the `contributes_to_via_loss/gain_of_function` relations are not standard Biolink relations, but are being used in the near term as a placeholder. In the future, the loss/gain of function will be represented using a qualifier attribute.
 
-![kg-diagram](https://user-images.githubusercontent.com/7217210/134852781-ddbda32c-7dfb-4725-b264-485d87010c39.png)
+
+![kg-diagram](https://user-images.githubusercontent.com/7217210/134853010-e6a5d75e-b054-41e9-b28d-6bf162b9ee34.png)
 
 
 ## Availablility
