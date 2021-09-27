@@ -2,8 +2,9 @@
 
 The Text Mining Provider produces knowledge graphs consisting of explicitly targeted Biolink Associations mined from sentences in the scientific literature. Two different representations of protein/gene entities are made available, one using human UniProt identifiers and the other using species-non-specific Protein Ontology identifiers (see documentation on the gene/protein represenation below). The current knowledge graph has been generated based on analysis of Medline titles & abstracts.
 
-The figure below details the associations that have been extracted from the scientific literature. Relations colored in gray are not yet part of the distributed knowledge graph, but are under active development. Note that the contributes_to_via_loss/gain_of_function relations are not standard Biolink relations, but are being used in the near term as a placeholder. In the future, the loss/gain of function will be represented using a qualifier attribute.
+The figure below details the associations that have been extracted from the scientific literature. Relations colored in gray are not yet part of the distributed knowledge graph, but are under active development. Note that the `contributes_to_via_loss/gain_of_function` relations are not standard Biolink relations, but are being used in the near term as a placeholder. In the future, the loss/gain of function will be represented using a qualifier attribute.
 
+![kg-diagram](https://user-images.githubusercontent.com/7217210/134852781-ddbda32c-7dfb-4725-b264-485d87010c39.png)
 
 
 ## Availablility
