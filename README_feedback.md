@@ -15,3 +15,17 @@ The service will return the follwing information based on the request:
 * 200 (OK) with the plain text message "Evaluation saved" if the request succeeded.
 * 400 (Bad Request) if the request body is not in JSON format or lacks the mandatory assertion_id property; the response text will clarify which error was found.
 * 401 (Unauthorized) with the plain text message "Unidentified user" if the request body does not contain the mandatory key property, or if the key does not correspond to an authorized user.
+
+Example usage:
+```
+curl --location --request POST 'https://feedback-p36smkc6hq-uc.a.run.app/evaluations' \
+--header 'Content-Type: application/json' \
+--data '{
+    "key": "<api_key>",
+    "assertion_id": "<assertion_id>",
+    "overall_correct": false,
+    "subject_correct": true,
+    "object_correct": true,
+    "predicate_correct": false
+}'
+```
