@@ -13,9 +13,9 @@ The figure below details the associations that have been extracted from the scie
 
 Protein Representation | Format | Location | Description
 ---------------------- | ------ | -------- | -----------
-UniProt | KGX | [Google Bucket](https://console.cloud.google.com/storage/browser/translator-text-workflow-dev-public/kgx/UniProt) | The files prefixed `nodes` and `edges` are the KGX formatted files housing the targeted association knowledge graph.
+UniProt | KGX | [Google Bucket](https://console.cloud.google.com/storage/browser/translator-text-workflow-dev-public/kgx/UniProt) | The `nodes.tsv.gz` and `edges.tsv.gz` files are the KGX formatted files housing the targeted association knowledge graph.
 UniProt | TRAPI | [TRAPI Endpoint](https://smart-api.info/ui/978fe380a147a8641caf72320862697b) | The referenced endpoint supports lookup queries over the UniProt version of the targeted association knowledge graph
-Protein Ontology | KGX | [Google Bucket](https://console.cloud.google.com/storage/browser/translator-text-workflow-dev-public/kgx/PR) | The files prefixed `nodes` and `edges` are the KGX formatted files housing the targeted association knowledge graph. 
+Protein Ontology | KGX | [Google Bucket](https://console.cloud.google.com/storage/browser/translator-text-workflow-dev-public/kgx/PR) | The `nodes.tsv.gz` and `edges.tsv.gz` files are the KGX formatted files housing the targeted association knowledge graph. 
 
 ## Documentation
 
