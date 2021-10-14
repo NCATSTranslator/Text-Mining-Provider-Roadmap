@@ -1,0 +1,12 @@
+attrs==21.2.0
+certifi==2021.10.8
+charset-normalizer==2.0.7
+idna==3.3
+jsonschema==3.2.0
+pyrsistent==0.18.0
+PyYAML==5.4.1
+reasoner-validator==2.1.0
+requests==2.26.0
+six==1.16.0
+pytest==6.2.5
+urllib3==1.26.7
