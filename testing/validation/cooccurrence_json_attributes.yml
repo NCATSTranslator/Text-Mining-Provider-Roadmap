@@ -1,0 +1,77 @@
+- attribute_type_id: biolink:original_knowledge_source
+  value: infores:text-mining-provider-cooccurrence
+  value_type_id: biolink:InformationResource
+  description: The Text Mining Provider Concept Cooccurrence KP from NCATS Translator provides cooccurrence metrics for text-mined concepts that cooccur at various levels, e.g. document, sentence, etc. in the biomedical literature.
+  attribute_source: infores:text-mining-provider-cooccurrence
+
+- attribute_type_id: biolink:supporting_data_source
+  value: infores:pubmed
+  value_type_id: biolink:InformationResource
+  attribute_source: infores:text-mining-provider-cooccurrence
+
+- attribute_type_id: biolink:supporting_study_result
+  value: <tmkp:\w+>
+  value_type_id: <biolink:(Document)|(Abstract)|(Title)|(Sentence)LevelConceptCooccurrenceAnalysisResult>
+  description: <a single result from computing cooccurrence metrics between two concepts that cooccur (at the document level)|(at the sentence level)|(in the document title)|(in the abstract)>
+  attribute_source: infores:text-mining-provider-cooccurrence
+  attributes:
+
+  - attribute_type_id: biolink:supporting_document
+    value: <PMID:\d{7,8}(|PMID:\d{7,8})*>
+    value_type_id: biolink:Publication
+    description: <The documents where the concepts of this assertion were observed to cooccur at the (document)|(sentence)|(title)|(abstract) level.>
+    attribute_source: infores:pubmed
+ 
+  - attribute_type_id: biolink:tmkp_concept1_count
+    value: <\d+>
+    value_type_id: SIO:000794
+    description: <The number of times concept \#1 was observed to occur at the (document)|(sentence)|(title)|(abstract) level in the documents that were processed>
+    attribute_source: infores:text-mining-provider-cooccurrence
+
+  - attribute_type_id: biolink:tmkp_concept2_count
+    value: <\d+>
+    value_type_id: SIO:000794
+    description: <The number of times concept \#2 was observed to occur at the (document)|(sentence)|(title)|(abstract) level in the documents that were processed>
+    attribute_source: infores:text-mining-provider-cooccurrence
+
+  - attribute_type_id: biolink:tmkp_concept_pair_count
+    value: <\d+>
+    value_type_id: SIO:000794
+    description: <The number of times the concepts of this assertion were observed to cooccur at the (document)|(sentence)|(title)|(abstract) level in the documents that were processed>
+    attribute_source: infores:text-mining-provider-cooccurrence
+
+  - attribute_type_id: biolink:tmkp_normalized_google_distance
+    value: <\d*\.\d+>
+    value_type_id: EDAM:data_1772
+    description: The normalized google distance score for the concepts in this assertion based on their cooccurrence in the documents that were processed
+    attribute_source: infores:text-mining-provider-cooccurrence
+
+  - attribute_type_id: biolink:tmkp_pointwise_mutual_information
+    value: <\d*\.\d+>
+    value_type_id: EDAM:data_1772
+    description: The pointwise mutual information score for the concepts in this assertion based on their cooccurrence in the documents that were processed
+    attribute_source: infores:text-mining-provider-cooccurrence
+
+  - attribute_type_id: biolink:tmkp_normalized_pointwise_mutual_information
+    value: <\d*\.\d+>
+    value_type_id: EDAM:data_1772
+    description: The normalized pointwise mutual information score for the concepts in this assertion based on their cooccurrence in the documents that were processed
+    attribute_source: infores:text-mining-provider-cooccurrence
+
+  - attribute_type_id: biolink:tmkp_mutual_dependence
+    value: <\d*\.\d+>
+    value_type_id: EDAM:data_1772
+    description: The mutual dependence (PMI^2) score for the concepts in this assertion based on their cooccurrence in the documents that were processed
+    attribute_source: infores:text-mining-provider-cooccurrence
+
+  - attribute_type_id: biolink:tmkp_normalized_pointwise_mutual_information_max
+    value: <\d*\.\d+>
+    value_type_id: EDAM:data_1772
+    description: A variant of the normalized pointwise mutual information score for the concepts in this assertion based on their cooccurrence in the documents that were processed
+    attribute_source: infores:text-mining-provider-cooccurrence
+
+  - attribute_type_id: biolink:tmkp_log_frequency_biased_mutual_dependence
+    value: <\d*\.\d+>
+    value_type_id: EDAM:data_1772
+    description: The log frequency biased mutual dependence score for the concepts in this assertion based on their cooccurrence in the documents that were processed
+    attribute_source: infores:text-mining-provider-cooccurrence
