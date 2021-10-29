@@ -14,7 +14,7 @@ class TestCooccurrenceKGX(unittest.TestCase):
     test_line_count = 50
     cooccurrence_edges_file_url = "https://storage.googleapis.com/translator-text-workflow-dev-public/kgx/UniProt/cooccurrence_edges.tsv.gz"
     cooccurrence_nodes_file_url = "https://storage.googleapis.com/translator-text-workflow-dev-public/kgx/UniProt/cooccurrence_nodes.tsv.gz"
-    edge_tsv_regex_list = [r'\w+:\w+', r'biolink:\w+', r'\w+:\w+', r'\w{27,}', r'biolink:\w+', r'tmkp:\w+_\w+']
+    edge_tsv_regex_list = [r'\w+:\w+', r'biolink:.+', r'\w+:\w+', r'.{27,}', r'biolink:\w+', r'tmkp:.+_\w+']
     node_tsv_regex_list = [r'\w+:\w+', r'.+', r'\w+:\w+']
 
     @classmethod
@@ -46,6 +46,7 @@ class TestCooccurrenceKGX(unittest.TestCase):
             cols = line.split('\t')
             self.assertEqual(len(cols), len(self.edge_tsv_regex_list) + 1)
             for i in range(len(self.edge_tsv_regex_list)):
+                print(cols[i])
                 self.assertIsNotNone(re.match(self.edge_tsv_regex_list[i], cols[i]))
 
     def test_edge_json_attributes(self):
