@@ -63,8 +63,6 @@ class TestTargetedKGX(unittest.TestCase):
                                 text = str(inner_json_object[inner_key]).strip()
                                 if inner_value.startswith('<') and inner_value.endswith('>'):
                                     regex = re.compile(inner_value[1:-1])
-                                    print(text)
-                                    print(regex)
                                     self.assertIsNotNone(regex.match(text))
                                 else:
                                     self.assertEqual(text, inner_value)
