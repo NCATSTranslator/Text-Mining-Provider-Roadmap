@@ -7,7 +7,7 @@ import re
 from urllib.request import urlretrieve
 
 
-class TestKGX(unittest.TestCase):
+class TestTargetedKGX(unittest.TestCase):
     json_attributes_schema = {}
     test_edge_lines = []
     test_node_lines = []
@@ -20,6 +20,8 @@ class TestKGX(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:  # pragma: no cover
+        if 'testing' not in os.getcwd():
+            os.chdir(f'{os.getcwd()}/testing/validation')
         with open('targeted_json_attributes.yml', 'r') as infile:
             cls.json_attributes_schema = yaml.safe_load(infile)
         if not os.path.isfile("targeted_edges.tsv.gz"):
