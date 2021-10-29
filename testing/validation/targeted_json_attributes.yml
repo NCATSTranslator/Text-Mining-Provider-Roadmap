@@ -1,0 +1,66 @@
+- attribute_type_id: biolink:original_knowledge_source
+  value: infores:text-mining-provider-targeted
+  value_type_id: biolink:InformationResource
+  description: The Text Mining Provider Targeted Biolink Association KP from NCATS Translator provides text-mined assertions from the biomedical literature.
+  attribute_source: infores:text-mining-provider-targeted
+
+- attribute_type_id: biolink:supporting_data_source
+  value: infores:pubmed
+  value_type_id: biolink:InformationResource
+  attribute_source: infores:text-mining-provider-targeted
+
+- attribute_type_id: biolink:supporting_document
+  value: <PMID:\d{7,8}(|PMID:\d{7,8})*>
+  value_type_id: biolink:Publication
+  description: The document(s) that contains the sentence(s) that assert the Biolink association represented by the edge; pipe-delimited
+  attribute_source: infores:pubmed
+
+- attribute_type_id: biolink:tmkp_confidence_score
+  value: <\d*\.\d+>
+  value_type_id: biolink:ConfidenceLevel
+  description: An aggregate confidence score that combines evidence from all sentences that support the edge
+  attribute_source: infores:text-mining-provider-targeted
+
+- attribute_type_id: biolink:supporting_study_result
+  value: <tmkp:\w+>
+  value_type_id: biolink:TextMiningResult
+  description: a single result from running NLP tool over a piece of text
+  attribute_source: infores:text-mining-provider-targeted
+  attributes: 
+
+    - attribute_type_id: biolink:supporting_text
+      value: <.+>
+      value_type_id: EDAM:data_3671
+      description: A sentence asserting the Biolink association represented by the parent edge
+      attribute_source: infores:text-mining-provider-targeted
+
+    - attribute_type_id: biolink:supporting_document
+      value: <PMID:\d{7,8}>
+      value_type_id: biolink:Publication
+      value_url: <https://pubmed.ncbi.nlm.nih.gov/\d{7,8}/>
+      description: The document that contains the sentence that asserts the Biolink association represented by the parent edge
+      attribute_source: infores:pubmed
+
+    - attribute_type_id: biolink:supporting_text_located_in
+      value: <\w+>
+      value_type_id: IAO_0000314
+      description: The part of the document where the sentence is located, e.g. title, abstract, introduction, conclusion, etc.
+      attribute_source: infores:pubmed
+
+    - attribute_type_id: biolink:extraction_confidence_score
+      value: <\d*\.\d+>
+      value_type_id: EDAM:data_1772
+      description: The score provided by the underlying algorithm that asserted this sentence to represent the assertion specified by the parent edge
+      attribute_source: infores:text-mining-provider-targeted
+
+    - attribute_type_id: biolink:subject_location_in_text
+      value: <\d+|\d+>
+      value_type_id: SIO:001056
+      description: The start and end character offsets relative to the sentence for the subject of the assertion represented by the parent edge; start and end offsets are pipe-delimited, discontinuous spans are delimited using commas
+      attribute_source:  infores:text-mining-provider-targeted
+
+    - attribute_type_id: biolink:object_location_in_text
+      value: <\d+|\d+>
+      value_type_id: SIO:001056
+      description: The start and end character offsets relative to the sentence for the object of the assertion represented by the parent edge; start and end offsets are pipe-delimited, discontinuous spans are delimited using commas
+      attribute_source: infores:text-mining-provider-targeted
