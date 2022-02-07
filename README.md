@@ -15,6 +15,13 @@ Available Knowledge Graphs | Description
 The Text Mining Provider aims to serve the needs of the NCATS Translator community, and thus development efforts are prioritized based on community input and feedback. If you have a specific target you would like the Text Mining Provider to address, or would like to report a text mining error [please submit an issue to this repository](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/issues/new/choose).
 
 
+## Associated code repositories
+* [TM Provider Pipelines](https://github.com/UCDenver-ccp/Translator-TM-Provider-Pipelines)
+* [TM Feedback Collection System](https://github.com/UCDenver-ccp/translator-text-mining-feedback)
+* [Relation Extraction](https://github.com/UCDenver-ccp/translator-relation-extraction)
+* [TM Concept Recognition tools](https://github.com/UCDenver-ccp/translator-concept-recognition)
+* [Cooccurrence TRAPI endpoint](https://github.com/UCDenver-ccp/Translator-TM-Provider-Cooccurrence)
+* [TM Evaluation Service](https://github.com/UCDenver-ccp/Translator-nlp-eval-service)
 
 
 
