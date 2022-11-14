@@ -1,10 +1,10 @@
 # Targeted Biolink Association Knowledge Graph
 
-The Text Mining Provider produces knowledge graphs consisting of explicitly targeted Biolink Associations mined from sentences in the scientific literature. Two different representations of protein/gene entities are made available, one using human UniProt identifiers and the other using species-non-specific Protein Ontology identifiers (see documentation on the gene/protein represenation below). The current knowledge graph has been generated based on analysis of Medline titles & abstracts.
+The Text Mining Provider produces knowledge graphs consisting of explicitly targeted Biolink Associations mined from sentences in the scientific literature. Two different representations of protein/gene entities are made available, one using human UniProt identifiers and the other using species-non-specific Protein Ontology identifiers (see documentation on the gene/protein represenation below). The current knowledge graph has been generated based on analysis of Medline titles & abstracts and full text articles from the Pubmed Central Open Access Subset.
 
-The figure below details the associations that have been extracted from the scientific literature. Relations colored in gray are not yet part of the distributed knowledge graph, but are under active development.
+The figure below details the associations that have been extracted from the scientific literature. 
 
-![kg-diagram](https://user-images.githubusercontent.com/7217210/135178464-58fde209-585f-4309-80ce-ab3e4205b795.png)
+![targeted-assoc-kg-diagram](https://user-images.githubusercontent.com/7217210/201738410-a80b1fdd-311a-4ae3-8690-b204268e19f5.png)
 
 
 
