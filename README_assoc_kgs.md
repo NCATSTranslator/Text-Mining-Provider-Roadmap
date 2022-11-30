@@ -30,7 +30,7 @@ The KGX format consists of two files, one containing a list of nodes and associa
 | PR:000031567  | leucine-rich repeat-containing protein 3B | biolink:Protein |
 
 
-### Proposed Edge TSV (Note: scroll table to see all columns)
+### Format of the edges.tsv file (Note: scroll table to see all columns)
 | *subject_curie* | *predicate* | *object_curie* | *id* | *association_type* | *confidence_score* | *supporting_study_result_identifiers* | *supporting_publication_identifiers* | *_attributes* |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 | CHEBI:3215 | biolink:entity_negatively_regulates_entity | PR:000031567 | hcR2-6QIJratLDFyFxwcSO6UW1M | biolink:ChemicalToGeneAssociation | 0.9378 | tmkp:HCX2k2hTBVNSoReGxxsGcL33jsg\|tmkp:6c9D9220faF116beFa1e80800D4 | PMID:29085514\|PMID:12345678 |  `ATTRIBUTE_JSON_BLOB` |
