@@ -1,5 +1,5 @@
 # Relation Classification
-Performance of the tuned BERT models used to classify sentences for particular relations between entities are shown in the table below. 
+Performance against held-out test sets of tuned BERT models used to classify sentences for particular relations between entities are shown in the table below. 
 
 Note that the predicates shown below are shortcuts for the qualified predicates used in the KG knowledge representation.
 
