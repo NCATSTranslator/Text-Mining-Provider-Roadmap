@@ -23,8 +23,9 @@ The Text Mining Provider aims to serve the needs of the NCATS Translator communi
 * [TM Concept Recognition tools](https://github.com/UCDenver-ccp/translator-concept-recognition)
 * [Cooccurrence TRAPI endpoint](https://github.com/UCDenver-ccp/Translator-TM-Provider-Cooccurrence)
 * [TM Evaluation Service](https://github.com/UCDenver-ccp/Translator-nlp-eval-service)
-
-
+* [Document Metadata API](https://github.com/UCDenver-ccp/DocumentMetadataAPI)
+* [TM Display and Feedback UI](https://github.com/UCDenver-ccp/Translator-TM-Provider-UI)
+* [TM KGX Parser for BTE](https://github.com/UCDenver-ccp/text_mining_targeted_association)
 
 
 
