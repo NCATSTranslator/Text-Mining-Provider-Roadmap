@@ -37,7 +37,7 @@ The KGX format consists of two files, one containing a list of nodes and associa
 
 where the `ATTRIBUTE_JSON_BLOB` would be JSON represented by the following YAML:
 ```yaml
-- attribute_type_id: biolink:original_knowledge_source
+- attribute_type_id: biolink:primary_knowledge_source
   value: infores:text-mining-provider-targeted
   value_type_id: biolink:InformationResource
   description: The Text Mining Provider Targeted Biolink Association KP from NCATS Translator provides text-mined assertions from the biomedical literature.
