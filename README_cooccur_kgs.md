@@ -1,15 +1,9 @@
 # Ontology Concept Cooccurrence Knowledge Graph
 
-Cooccurrence of biomedical concepts within a single document or sentence can serve as a proxy for a potential relationship between two concepts. The Text Mining Provider produces knowledge graphs consisting of biomedical entities that are linked based on their cooccurrence within the scientific literature. Cooccurrence is monitored at several different levels within a document, e.g. cooccurrence in the title, in a sentence, in the entire document, etc. A suite of cooccurrence metrics is computed for each pair of concepts that are observed together. Two different representations of protein/gene entities are made available, one using human UniProt identifiers and the other using species-non-specific Protein Ontology identifiers (see documentation on the gene/protein represenation below). The current knowledge graph has been generated based on analysis of Medline titles only.
+Cooccurrence of biomedical concepts within a single document or sentence can serve as a proxy for a potential relationship between two concepts. The Text Mining Provider produces knowledge graphs consisting of biomedical entities that are linked based on their cooccurrence within the scientific literature. Cooccurrence is monitored at several different levels within a document, e.g. cooccurrence in the title, in a sentence, in the entire document, etc. A suite of cooccurrence metrics is computed for each pair of concepts that are observed together.
 
 ## Availablility
 
-Protein Representation | Format | Location | Description
----------------------- | ------ | -------- | -----------
-UniProt | KGX | [Google Bucket](https://console.cloud.google.com/storage/browser/translator-text-workflow-dev-public/kgx/UniProt) | The `cooccurrence_nodes.tsv.gz` and `cooccurrence_edges.tsv.gz` are the KGX formatted files housing the concept cooccurrence knowledge graph. The files are also available as a single `cooccurrence.tar.gz` tarball
-UniProt | KGX | [Translator KGE Archive](https://archive.translator.ncats.io/) | Knowledge graph name = Cooccurrence
-UniProt | TRAPI | [TRAPI Endpoint](https://smart-api.info/ui/5be0f321a829792e934545998b9c6afe) | The referenced endpoint supports lookup queries over the UniProt version of the concept cooccurrence knowledge graph
-Protein Ontology | KGX | [Google Bucket](https://console.cloud.google.com/storage/browser/translator-text-workflow-dev-public/kgx/PR) | The files prefixed `cooccurrence_nodes` and `cooccurrence_edges` are the KGX formatted files housing the concept cooccurrence knowledge graph. 
 
 
 ## Documentation
@@ -31,7 +25,7 @@ The Text Mining Provider automatically identifies mentions of concepts from the 
 * [Uberon multi-species anatomy ontology (UBERON)](http://obofoundry.org/ontology/uberon.html)
 
 
-#### KGX / TRAPI attribute documentation
+#### TRAPI attribute documentation
 For a detailed description and example of our KGX format (which includes the structure of our TRAPI attribute representation), please see [this GitHub issue](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/issues/93).
 
 #### Cooccurrence metrics
