@@ -1,9 +1,10 @@
-# Ontology Concept Cooccurrence Knowledge Graph
+# Concept Cooccurrence Knowledge Graph
 
 Cooccurrence of biomedical concepts within a single document or sentence can serve as a proxy for a potential relationship between two concepts. The Text Mining Provider produces knowledge graphs consisting of biomedical entities that are linked based on their cooccurrence within the scientific literature. Cooccurrence is monitored at several different levels within a document, e.g. cooccurrence in the title, in a sentence, in the entire document, etc. A suite of cooccurrence metrics is computed for each pair of concepts that are observed together.
 
 ## Availablility
 
+[Concept Cooccurrence API Documentation](https://smart-api.info/ui/2d7efe7d2dabb473c5856e7da98fda5e)
 
 
 ## Documentation
