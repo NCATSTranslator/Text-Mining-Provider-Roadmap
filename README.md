@@ -1,5 +1,3 @@
-![Live KG Testing](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/actions/workflows/live-testing.yaml/badge.svg)
-![TRAPI Validation Testing](https://github.com/NCATSTranslator/Text-Mining-Provider-Roadmap/actions/workflows/validation-testing.yaml/badge.svg)
 
 # NCATS Text Mining Provider Roadmap
 This repository serves as a centralized location for organizing and tracking the development of the NCATS Translator Text Mining Provider. The Text Mining Provider aims to provide an up-to-date, Biolink-compatible, knowledge graph composed of assertions mined from the available full-text biomedical literature as well as a knowledge graph based on the cooccurrence of pairs of concepts in the biomedical literature, scored using a suite of different cooccurrence metrics.
